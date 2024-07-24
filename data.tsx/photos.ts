@@ -47,22 +47,22 @@ type PhotoItem = {
     {
       title: 'Autumn Leaves',
       description: 'Colorful autumn leaves on the ground.',
-      url: '',
+      url: 'https://images.unsplash.com/photo-1515224526905-51c7d77c7bb8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNlYXxlbnwwfHwwfHx8Mg%3D%3D',
     },
     {
       title: 'City Park',
       description: 'A peaceful park in the middle of a bustling city.',
-      url: '',
+      url: 'https://images.unsplash.com/photo-1516900557549-41557d405adf?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2l0eXxlbnwwfHwwfHx8Mg%3D%3D',
     },
     {
       title: 'Starry Night',
       description: 'A clear night sky filled with stars.',
-      url: '',
+      url: 'https://images.unsplash.com/photo-1721786642795-6041d379208f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIwfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D',
     },
     {
       title: 'Waterfall',
       description: 'A majestic waterfall in a lush landscape.',
-      url: '',
+      url: 'https://images.unsplash.com/photo-1478059299873-f047d8c5fe1a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW91bnRhaW58ZW58MHx8MHx8fDA%3D',
     },
   ];
   
