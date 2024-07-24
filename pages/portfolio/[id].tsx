@@ -3,6 +3,7 @@ import { Todos, fetchData } from '../text';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
+import Nav from '@/components/nav';
 
 
 interface TodoDetailProps {
@@ -16,7 +17,10 @@ const Detail: React.FC<TodoDetailProps> = ({todo}) => {
     
     
     return (
-        <div className="container mx-auto p-4">
+        <div className="">
+
+<Nav />
+
       <h1 className="text-3xl font-bold mb-4">{todo.title}</h1>
       <p>ID: {todo.id}</p>
       <img src={todo.url} alt={todo.title} className="rounded" />

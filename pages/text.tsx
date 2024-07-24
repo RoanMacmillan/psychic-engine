@@ -21,13 +21,7 @@ export interface Todos {
 
 const Test: React.FC<TodoProps> = ({ todos }) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  const handleMenu = () => {
-
-    setIsMenuOpen(true);
-
-  }
  
 
   useEffect(() => {
@@ -42,7 +36,7 @@ const Test: React.FC<TodoProps> = ({ todos }) => {
     <div className="relative">
       {!isLoading && 
       
-        <Nav openMenu={handleMenu} />
+        <Nav />
       
       }
 
@@ -86,35 +80,7 @@ const Test: React.FC<TodoProps> = ({ todos }) => {
       )}
     </AnimatePresence>
 
-<AnimatePresence>
-      {isMenuOpen && 
 
-<motion.div
-initial={{ opacity: 0 }}
-animate={{ opacity: 1 }}
-exit={{ opacity: 0 }}
-transition={{ duration: 0.3 }}
->
-      
-      <div
-      className={`
-    
-    
- bg-slate-950 absolute z-20 top-0 w-full flex justify-between px-3 min-h-screen text-white py-3`}
-    >
-
-        <Link href='/text'>Home</Link>
-
-        <Button onClick={() => setIsMenuOpen(false)}>Close</Button>
-      
-    </div>
-
-    </motion.div>
-        
-      }
-
-
-</AnimatePresence>
 
 
     </div>
