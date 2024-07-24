@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import { Button } from "@/components/ui/button"; 
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Nav from "@/components/nav";
+import Layout from "@/components/layout";
+import List from "@/components/list";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,14 +18,21 @@ export default function Home() {
 
 
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
+   
+
+      <Layout title='Home' >
+
+        <h1 className="text-3xl font-bold">Photop</h1>
+        <p className="mt-1">The world's source for visuals.</p>
+        <p>Powered by creators everywhere.</p>
+
+        <List />
+
+
+      </Layout>
 
       
-    {/* <Button>Click me</Button> */}
 
-    </main>
   );
 }
 
