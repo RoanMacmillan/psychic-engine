@@ -2,7 +2,12 @@ import BlurFade from "@/lib/functions";
 import axios from "axios";
 import { GetStaticProps } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from 'framer-motion';
+import { Button } from "@/components/ui/button";
+import Nav from "@/components/nav";
+
 
 export interface TodoProps {
   todos: Todos[];
@@ -16,21 +21,30 @@ export interface Todos {
 
 const Test: React.FC<TodoProps> = ({ todos }) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  const handleModal = () => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  };
+  const handleMenu = () => {
+
+    setIsMenuOpen(true);
+
+  }
+ 
 
   useEffect(() => {
-    handleModal();
-    console.log(todos);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="relative">
-      {!isLoading && <h1 className="text-5xl px-3 py-4">Title</h1>}
+      {!isLoading && 
+      
+        <Nav openMenu={handleMenu} />
+      
+      }
 
       <div className="grid grid-cols-2 gap-2 py-3 px-3">
         {todos.map((todo) => (
@@ -40,16 +54,27 @@ const Test: React.FC<TodoProps> = ({ todos }) => {
             delay={isLoading ? 2.5 : 0.2}
             inView
           >
+            <Link href={`/portfolio/${todo.id}`}>
             <div className="bg-slate-100 h-[200px] rounded-sm shadow-sm p-2">
               <div>{todo.id}</div>
               <div>{todo.title}</div>
             </div>
+            </Link>
           </BlurFade>
         ))}
       </div>
 
+   
+
+<AnimatePresence>
       {isLoading && (
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+             <div
           className={` fadeDiv
         
         
@@ -57,7 +82,41 @@ const Test: React.FC<TodoProps> = ({ todos }) => {
         >
           Loading...
         </div>
+        </motion.div>
       )}
+    </AnimatePresence>
+
+<AnimatePresence>
+      {isMenuOpen && 
+
+<motion.div
+initial={{ opacity: 0 }}
+animate={{ opacity: 1 }}
+exit={{ opacity: 0 }}
+transition={{ duration: 0.3 }}
+>
+      
+      <div
+      className={`
+    
+    
+ bg-slate-950 absolute z-20 top-0 w-full flex justify-between px-3 min-h-screen text-white py-3`}
+    >
+
+        <Link href='/text'>Home</Link>
+
+        <Button onClick={() => setIsMenuOpen(false)}>Close</Button>
+      
+    </div>
+
+    </motion.div>
+        
+      }
+
+
+</AnimatePresence>
+
+
     </div>
   );
 };
