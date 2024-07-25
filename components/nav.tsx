@@ -24,7 +24,7 @@ const Nav = () => {
         </Link>
 
 
-        <Input placeholder="Search Photop..."></Input>
+        <Input type="search" placeholder="Search Photop..."></Input>
 
         <Button onClick={handleMenu}>Menu</Button>
       </nav>
