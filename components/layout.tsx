@@ -10,7 +10,7 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children, title = 'My App' }) => {
   return (
-    <div className='px-2 max-w-[1000px] mx-auto'>
+    <div className='px-2 max-w-[1150px] mx-auto'>
       <Head>
         <title>{title}</title>
         <meta charSet="UTF-8" />

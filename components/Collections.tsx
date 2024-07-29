@@ -3,7 +3,7 @@ import React from "react";
 
 
 const Collections = () => {
-  return <div className="border relative p-4 flex items-end  sm:h-[150px]   rounded-sm">
+  return <div className="border relative p-4 flex items-end  sm:h-[150px] md:h-[200px]   rounded-sm">
 
     <div className="text-white relative z-20">
     <h1 className="text-white text-xs">Discover Photop+</h1>

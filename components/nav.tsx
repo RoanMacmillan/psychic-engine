@@ -13,7 +13,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className=" flex justify-between items-center gap-4 py-3">
+      <nav className=" flex justify-between border-b-0 items-center gap-4 py-3">
         <Link href="/text">
         <div className="flex gap-1">
         <div className="w-4 h-6 bg-slate-950"></div>
@@ -24,7 +24,7 @@ const Nav = () => {
         </Link>
 
 
-        <Input type="search" placeholder="Search Photop..."></Input>
+        {/* <Input type="search" placeholder="Search Photop..."></Input> */}
 
         <Button onClick={handleMenu}>Menu</Button>
       </nav>
@@ -42,9 +42,13 @@ const Nav = () => {
               className={`
     
     
-  flex justify-between px-3 text-white py-3`}
+  flex justify-between items-center px-2 text-white py-3`}
             >
-              <Link href="/text">Home</Link>
+
+              <div className="flex gap-1">
+        <div className="w-4 h-6 bg-white"></div>
+        <div className="w-4 h-4 bg-white"></div>
+        </div>
 
               <Button onClick={() => setIsMenuOpen(false)}>Close</Button>
             </div>

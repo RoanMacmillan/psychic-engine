@@ -16,6 +16,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
+import { Input } from "@/components/ui/input";
+import { Toaster } from "sonner";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -31,22 +34,25 @@ export default function Home() {
 
       <Layout title='Home' >
 
-        <h1 className="text-3xl mt-5 font-bold">Photop</h1>
+        <h1 className="text-3xl mt-10 font-bold">Photop</h1>
         {/* <p className="mt-1">The world's source for visuals.</p> */}
         {/* <p>Powered by creators everywhere.</p> */}
 
-        <Carousel className="mt-3">
+        {/* <Input ></Input> */}
+
+        {/* <Carousel className="mt-3">
   <CarouselContent className="">
     <CarouselItem className="basis-3/4 sm:basis-1/2"><Card /></CarouselItem>
     <CarouselItem className="basis-3/4 sm:basis-1/2"><Collections/></CarouselItem>
-    {/* <CarouselItem className="basis-3/4"><Card /></CarouselItem> */}
   </CarouselContent>
-  {/* <CarouselPrevious /> */}
-  {/* <CarouselNext /> */}
-</Carousel>
+</Carousel> */}
+
+
 
 
         <List />
+
+        <Toaster />
 
 
       </Layout>
