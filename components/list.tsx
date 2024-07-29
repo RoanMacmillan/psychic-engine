@@ -77,7 +77,7 @@ const List = () => {
 
   return (
     <>
-      <Carousel className="mt-3">
+      <Carousel className="mt-3 lg:hidden">
         <CarouselContent className="">
           <CarouselItem className="basis-3/4 sm:basis-1/2">
             <Card />
@@ -171,9 +171,9 @@ const List = () => {
                 </Button> */}
               </div>
 
-              <Button className="shadow-sm" variant="outline">
+              {/* <Button className="shadow-sm" variant="outline">
                 Download
-              </Button>
+              </Button> */}
             </div>
           </li>
         ))}
