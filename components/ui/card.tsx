@@ -10,13 +10,13 @@ const Card = () => {
 
   return (
     <>
-      <div className="border sm:flex flex-col justify-between rounded-sm sm:h-[9.375rem] md:h-[200px]">
-        <div className="flex gap-2 p-3 flex-wrap">
+      <div className="border sm:flex flex-col justify-between rounded-sm sm:h-[9.375rem] lg:h-[250px] md:h-[200px]">
+        <div className="flex gap-2 p-3 flex-wrap lg:flex-nowrap">
           {buttons.map((button, index) => (
 
             <div key={index}>
 
-            <Button variant='outline'>{button}</Button>
+            <Button variant='outline'>{button}</Button> 
 
             </div>
 

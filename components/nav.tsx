@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Input } from "./ui/input";
+import { PopoverDemo } from "./navmenu";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -24,12 +25,16 @@ const Nav = () => {
         </Link>
 
 
+
+        <PopoverDemo></PopoverDemo>
+
+
         {/* <Input type="search" placeholder="Search Photop..."></Input> */}
 
-        <Button onClick={handleMenu}>Menu</Button>
+        {/* <Button onClick={handleMenu}>Menu</Button> */}
       </nav>
 
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -55,6 +60,8 @@ const Nav = () => {
           </motion.div>
         )}
       </AnimatePresence>
+     */}
+
     </>
   );
 };
