@@ -95,7 +95,7 @@ const List = () => {
       <h1 className="text-5xl font-bold">Photop</h1>
       <div className="flex justify-between">
         <div>
-      <p className="mt-2">The world's source for visuals.</p>
+      <p className="mt-2">The source for visuals.</p>
         <p>Powered by creators everywhere.</p>
         </div>
 
