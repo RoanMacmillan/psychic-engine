@@ -34,9 +34,7 @@ export default function Home() {
 
       <Layout title='Home' >
 
-        <h1 className="text-3xl mt-10 font-bold">Photop</h1>
-        {/* <p className="mt-1">The world's source for visuals.</p> */}
-        {/* <p>Powered by creators everywhere.</p> */}
+        
 
         {/* <Input ></Input> */}
 
